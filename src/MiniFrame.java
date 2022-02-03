@@ -1,52 +1,41 @@
 import java.awt.FlowLayout;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
-import java.awt.event.*;
 
 
 public class MiniFrame extends JFrame{
-    JButton myBoutonsChiffres[] = new JButton[9];
-    JButton myBoutonsOperator[] = new JButton[5];
-    JButton clear;
-    JTextField text;
+
+    JButton[] chiffres;
+    JButton[] operator;
+    JTextField jf;
 
     public MiniFrame(){
-
-        super("Calculatrice");
+        super("Ma mini frame");
 
         setLayout(new FlowLayout());
 
-        //INITIALISATION DES BOUTONS
+        chiffres = new JButton[5];
+        operator = new JButton[5];
+        jf = new JTextField(10);
 
-        clear = new JButton("CLEAR");
-        text = new JTextField(10);
+
         int i = 0;
-        for (JButton bouton : myBoutonsChiffres) {
-            String a = ""+i;
-            bouton.setName(a);
+
+        for (JButton chiffre : chiffres) {
+            String titre = ""+i;
+            chiffre.setText(titre);
             i++;
-            add(bouton);
+            add(chiffre);
         }
 
-        for (JButton Operator : myBoutonsOperator)
-        {
-            Operator.setName("+");
-            add(Operator);
-        }
-        clear.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e){
-                text.setText("");
-            }});
+        add(jf);
 
-        add(text);
-        add(clear);
 
 
         setSize(300,300);
         setVisible(true);
 
     }
-
-
 }
