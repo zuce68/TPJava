@@ -10,8 +10,6 @@ import java.util.OptionalInt;
 import java.util.Random;
 
 public class SymMat {
-
-
     public float[][] Matrice;
 
     public SymMat(int taille)
@@ -79,7 +77,7 @@ public class SymMat {
 
     public static void main(String[] arguments)
     {
-        SymMat maMatrice = new SymMat(3);
+        SymMat maMatrice = new SymMat(10);
         float trace = maMatrice.trace();
         double norme = maMatrice.Norme();
     }
