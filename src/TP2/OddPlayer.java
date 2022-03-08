@@ -1,13 +1,14 @@
-import TP2.Player;
-
+package TP2;
 import java.util.Random;
 
 public class OddPlayer extends Player {
     private int score;
-    public int oddPlayerNumber;
+    public static int oddPlayerNumber;
 
-    public OddPlayer(String nickName, int yob) {
-        super(nickName, yob, 0, 0, 0);
+    public OddPlayer(String nickName, int yob, int score, int played, int won)
+    {
+        super(nickName, yob, score, played, won);
+        oddPlayerNumber+=1;
     }
 
     public int play()
@@ -17,8 +18,13 @@ public class OddPlayer extends Player {
             this.score+=resultat;
             this.score+=resultat;
             this.score+=resultat;
+            System.out.printf("Scddore : "+this.score+"\n");
         }
         return 0;
+    }
+
+    public int getScore(){
+        return  this.score;
     }
 
     protected void finalize() throws Throwable {

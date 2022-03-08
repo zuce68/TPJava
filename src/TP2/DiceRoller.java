@@ -1,5 +1,7 @@
+package TP2;
 import java.util.Random;
 public class DiceRoller extends TP2.Player {
+
     private int bonus;
     private int score;
     public static int diceRollerNumber;
@@ -14,8 +16,8 @@ public class DiceRoller extends TP2.Player {
         super.finalize();
     }
 
-    public DiceRoller(String nickName, int yob){
-        super(nickName,yob,0,0,0);
+    public DiceRoller(String nickName, int yob, int score,int played, int won){
+        super(nickName,yob,score,played,won);
         this.score=0;
         this.bonus=0;
         this.diceRollerNumber+=1;
@@ -28,7 +30,6 @@ public class DiceRoller extends TP2.Player {
         {
             this.bonus+=1;
         }
-
         System.out.printf("Dé : "+resultat+"\n");
         System.out.printf("Score : "+this.score+"\n");
         return 0;
@@ -37,6 +38,7 @@ public class DiceRoller extends TP2.Player {
     public int getScore(){
         return  this.score*(this.bonus+1);
     }
+
     int genererInt(int borneInf, int borneSup){
         Random random = new Random();
         int nb;

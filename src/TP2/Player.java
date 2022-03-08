@@ -9,6 +9,7 @@ public class Player {
     public int played;
     public int won;
     public static int numberPlayer;
+    public double ratio;
     
     protected void finalize()  throws Throwable
     {
@@ -30,6 +31,7 @@ public class Player {
         this.played=played;
         this.won=won;
         this.numberPlayer+=1;
+        this.ratio=won/played;
     }
 
     public int playerOld()
@@ -61,10 +63,5 @@ public class Player {
         this.score+=1;
         this.played+=1;
     }
-    public static void main(String[] arguments)
-    {
 
-      //  DiceRoller test = new DiceRoller("zuce",2001);
-        
-    }
 }
