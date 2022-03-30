@@ -1,5 +1,7 @@
 package TP3;
 
+import TP1.MiniFrame;
+
 import java.awt.*;
 import java.text.Normalizer;
 import java.util.*;
@@ -41,9 +43,24 @@ public class main {
         System.out.printf("Number carre :"+Carre.numberCarre+"\n");
         System.out.printf("Number Form :"+Forme2D.numberForm+"\n");
 
+        myList.remove(1);
+        System.gc();
+
+        // J'enlève un objet au hasard de ma liste et j'appelle le garbage collector
+
+        System.out.printf("Number circle :"+Cercle.numberCercle+"\n");
+        System.out.printf("Number carre :"+Carre.numberCarre+"\n");
+        System.out.printf("Number Form :"+Forme2D.numberForm+"\n");
+
         ArrayList<Forme2D> myCircles = new ArrayList<>();
 
+        for (Forme2D form : myList){
+           if(form instanceof Cercle){
+               myCircles.add(form);
+           }
+        }
 
+        Frame myForm = new Frame();
 
     }
 }
