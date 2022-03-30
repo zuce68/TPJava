@@ -43,10 +43,10 @@ public class main {
         System.out.printf("Number carre :"+Carre.numberCarre+"\n");
         System.out.printf("Number Form :"+Forme2D.numberForm+"\n");
 
-        myList.remove(1);
+        myList.remove(0);
         System.gc();
 
-        // J'enlève un objet au hasard de ma liste et j'appelle le garbage collector
+        // J'enlève l'objet d'indice 0 de ma liste (le plus grand après le trie) et j'appelle le garbage collector
 
         System.out.printf("Number circle :"+Cercle.numberCercle+"\n");
         System.out.printf("Number carre :"+Carre.numberCarre+"\n");
