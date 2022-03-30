@@ -1,12 +1,5 @@
-import java.awt.*;
-import java.text.DecimalFormat;
-import java.util.Arrays;
-import java.util.OptionalDouble;
-import javax.swing.JOptionPane;
-import javax.swing.JButton;
+package TP1;
 
-import java.util.Random;
-import java.util.OptionalInt;
 import java.util.Random;
 
 public class SymMat {
